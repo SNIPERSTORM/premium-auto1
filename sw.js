@@ -5,7 +5,7 @@ const urlsToCache = [
   '/premium-auto1/feedback.html',
   '/premium-auto1/contacts.html',
   '/premium-auto1/styles.css',
-  '/premium-auto1/images/logo.png',
+  '/premium-auto1/images/logo.jpg',
   '/premium-auto1/images/banner.jpg',
   '/premium-auto1/images/car1.jpg',
   '/premium-auto1/images/car2.jpg',
