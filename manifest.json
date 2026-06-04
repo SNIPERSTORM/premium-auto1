@@ -1,9 +1,9 @@
 {
   "name": "Premium Auto",
   "short_name": "AutoPremium",
-  "start_url": "/index.html",
-  "scope": "/",
-  "id": "/",
+  "start_url": "/premium-auto1/index.html",
+  "scope": "/premium-auto1/",
+  "id": "/premium-auto1/",
   "display": "standalone",
   "theme_color": "#16213e",
   "background_color": "#ffffff",
