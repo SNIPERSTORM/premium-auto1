@@ -18,12 +18,15 @@ const urlsToCache = [
 self.addEventListener('install', event => {
   console.log('SW: Установка');
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('SW: Кэширование файлов');
-        return cache.addAll(urlsToCache);
-      })
-      .catch(err => console.log('SW: Ошибка кэширования:', err))
+    caches.open(CACHE_NAME).then(cache => {
+      return Promise.all(
+        urlsToCache.map(url => {
+          return cache.add(url).catch(err => {
+            console.error(`SW: Не удалось закэшировать ${url}:`, err);
+          });
+        })
+      );
+    })
   );
 });
 
