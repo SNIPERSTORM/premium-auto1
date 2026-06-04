@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты | Premium Auto</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="manifest" href="/manifest.json">
 </head>
 <body>
 
@@ -98,6 +99,14 @@
             <p>ИП Седов Н.С. | ИНН 123456789012</p>
         </div>
     </footer>
-
+	<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('SW зарегистрирован'))
+        .catch(err => console.log('Ошибка SW:', err));
+    });
+  }
+</script>
 </body>
 </html>
